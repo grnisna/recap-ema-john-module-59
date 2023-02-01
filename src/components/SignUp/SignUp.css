@@ -1,0 +1,46 @@
+.forms {
+    background-color: rgb(8, 177, 168);
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .forms form p {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .inputDiv {
+    margin-top: 10px;
+  }
+  
+  .inputField {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 90%;
+  }
+  
+  .submitBtn {
+    width: 30%;
+    margin: auto;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  .Btn {
+    padding: 10px 20px;
+  }
+  .Btn:hover {
+    color: #fff;
+    background: rgb(4, 172, 74);
+    transition: 0.3s;
+    border: 2px solid rgb(4, 172, 74);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+
+  .errorText{
+    color: rgb(170, 30, 30);
+  }
