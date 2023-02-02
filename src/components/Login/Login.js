@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextRoutes/UserContext";
 import "./Login.css";
 
@@ -7,6 +7,8 @@ const Login = () => {
   const [error, setError] = useState(null);
   const [firebaseError, setFirebaseError] = useState(null);
   const [typingEmail, setTypingEmail] = useState(null);
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const { user, loggedInUser, resetPassword } = useContext(AuthContext);
 
@@ -23,7 +25,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         form.reset();
-        navigate("/");
+        navigate(from, {replace:true});
       })
       .catch((error) => {
         setFirebaseError(error.message);
